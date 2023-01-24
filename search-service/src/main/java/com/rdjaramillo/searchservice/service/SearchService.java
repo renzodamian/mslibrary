@@ -15,17 +15,17 @@ public class SearchService {
     RestTemplate restTemplate;
 
     public List<Book> getBooksTitle(String title){
-        List<Book> books = restTemplate.getForObject("http://localhost:8001/book/title/"+title, List.class);
+        List<Book> books = restTemplate.getForObject("http://bookcatalog-service/book/title/"+title, List.class);
         return books;
      }
 
     public List<Book> getBooksAuthor(String author){
-        List<Book> books = restTemplate.getForObject("http://localhost:8001/book/author/"+author, List.class);
+        List<Book> books = restTemplate.getForObject("http://bookcatalog-service/book/author/"+author, List.class);
         return books;
     }
 
     public List<Book> getBooksGender(String gender){
-        List<Book> books = restTemplate.getForObject("http://localhost:8001/book/gender/"+gender, List.class);
+        List<Book> books = restTemplate.getForObject("http://bookcatalog-service/book/gender/"+gender, List.class);
         return books;
     }
 }
